@@ -24,10 +24,11 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repo.
 2. In the project root, Create a `.env` file and copy the contents of `.env.example` into it.
-3. Fill in the environment variables.
+3. Populate the environment variables with your actual values.
 4. Continue to PostgreSQL steps.
+5. Finally, in the project root: `go run main.go`
 
-## PostgreSQL
+### PostgreSQL
 
 1. Ensure Docker engine is running.
 2. Start postgres: `docker run --name your-pg-db -e POSTGRES_PASSWORD=somepassword -p 5431:5432 -d postgres`
