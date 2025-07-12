@@ -1,0 +1,42 @@
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.prof
+*.exe~
+*.so
+
+# Test binary, built with `go test -c`
+*.test
+
+# Code coverage profiles and other test artifacts
+*.out
+coverage.*
+*.coverprofile
+profile.cov
+
+# Dependency caches
+vendor/
+go.mod.bak
+go.sum.bak
+
+# Editor/IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# Go workspace file
+go.work
+go.work.sum
+
+# env file
+.env
+
+# Log files
+*.log
+
+# Test cache
+/pkg/
