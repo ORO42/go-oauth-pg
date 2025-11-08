@@ -17,7 +17,6 @@ func InitDB() {
 		fmt.Fprintf(os.Stderr, "Unable to create connection pool: %v\n", err)
 		os.Exit(1)
 	}
-	defer DBPool.Close()
 
 	// Create the shared updated_at trigger function
 	_, err = DBPool.Exec(context.Background(), `
@@ -76,5 +75,11 @@ func InitDB() {
 			fmt.Fprintf(os.Stderr, "Error creating trigger for table %s: %v\n", name, err)
 			os.Exit(1)
 		}
+	}
+}
+
+func CloseDB() {
+	if DBPool != nil {
+		DBPool.Close()
 	}
 }

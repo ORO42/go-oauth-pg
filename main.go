@@ -17,6 +17,7 @@ func main() {
 	}
 
 	db.InitDB()
+	defer db.CloseDB()
 	auth.InitAuth()
 
 	mux := http.NewServeMux()
